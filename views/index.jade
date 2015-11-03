@@ -2,9 +2,22 @@ extends layout
 
 block content
   h1= title
-  p Welcome to #{title}
+  p Welcome to Voice Testing Tool
   form
     input(type="text" name="urls")
     input(type="submit")
+
+
+block nav
+  nav(class="light-blue lighten-1" role="navigation") Api Testing
+
+
+
+block footer
+   script(src="javascripts/jquery.js");
+    script(src="javascripts/materialize.js")
+    script(src="javascripts/init.js")
+
+
 
 
