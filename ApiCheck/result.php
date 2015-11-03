@@ -55,14 +55,14 @@ $status=true;
 }
 else {
 
-echo "<div class='fail'>The Json File isn'nt valid </div><br>";
+echo "<div class='fail message'>The Json File isn'nt valid </div><br>";
 
 }
 
 }
 if($status) {
 
-  echo "<div class='sucess'>Test Was Passed Successfully</div>";
+  echo "<div class='sucess message'>Test Was Passed Successfully</div>";
 }
 
 ?>
@@ -70,7 +70,7 @@ if($status) {
         
 
 <script>
-  var a=document.querySelector('.sucess').innerHTML;
+  var a=document.querySelector('.message').innerHTML;
   console.log(a);
 
 
