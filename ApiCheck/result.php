@@ -39,23 +39,23 @@ $url=$_POST['urls'];
 $requests=$_POST['requests']; 
 $email=$_POST['email']; 
 $status=false;
-
+echo "<div class='info'>";
 echo "<h2>Test ID: $testId</h2>";
 echo "<h2>Test Name:$testName</h2>";
-echo "<h2>URL to be Tested: $url</h2>";
+echo "<h2>URL to be Tested: <a href='$url'> $url</a></h2>";
 echo "<h2>Email: $email</h2>";
-
+echo "</div>";
 for ($i=0; $i <$requests ; $i++) { 
   
 $Jurl=file_get_contents($url);
 if(json_decode($Jurl, true)) {
-echo "<h2> Request Number: ".$i."</h2>";
+echo "<h2 class='req'> Request Number: ".$i."</h2>";
 var_dump(json_decode($Jurl, true));
 $status=true;
 }
 else {
 
-echo "<div class='fail message'>The Json File isn'nt valid </div><br>";
+echo "<div class='fail message' onload=word();> Fail! json file is not valid. </div><br>";
 
 }
 
